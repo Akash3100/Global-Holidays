@@ -1,5 +1,5 @@
 .activities {
-  padding: 96px clamp(20px, 4vw, 72px);
+  padding: clamp(62px, 7vw, 96px) clamp(16px, 4vw, 72px);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 245, 0.98)),
     #f6faf7;
@@ -305,7 +305,7 @@
 
 @media (max-width: 720px) {
   .activities {
-    padding: 72px 16px;
+    padding: 62px 16px;
   }
 
   .activities__header {
@@ -313,7 +313,7 @@
   }
 
   .activities__image-viewport {
-    min-height: 390px;
+    min-height: min(390px, 72vh);
     aspect-ratio: 4 / 5;
   }
 
@@ -336,8 +336,8 @@
   }
 
   .activity-card__frame {
-    height: 590px;
-    min-height: 590px;
+    height: min(590px, 82vh);
+    min-height: 430px;
   }
 
   .activity-card__meta {
@@ -347,5 +347,20 @@
 
   .activity-card__link {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .activities__image-overlay h3 {
+    font-size: 1.55rem;
+  }
+
+  .activity-card__heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .activity-card__frame {
+    min-height: 390px;
   }
 }

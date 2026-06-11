@@ -5,7 +5,7 @@
 
 
 .contact {
-  padding: 80px 8%; 
+  padding: clamp(58px, 7vw, 80px) clamp(16px, 6vw, 8%); 
   background: linear-gradient(
     145deg,
     #0b1322 0%,
@@ -24,7 +24,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
-  gap: 40px;
+  gap: clamp(24px, 4vw, 40px);
   align-items: center;
   width: 100%;
 }
@@ -61,8 +61,8 @@
 .contact__card {
   background: rgba(255, 255, 255, 0.03); 
   backdrop-filter: blur(10px);
-  padding: 40px 30px;
-  border-radius: 24px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 3vw, 30px);
+  border-radius: 8px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -221,7 +221,7 @@
 
 @media (max-width: 1024px) {
   .contact {
-    padding: 60px 5%;
+    padding: 58px 16px;
   }
 
   .contact__container {
@@ -251,9 +251,16 @@
   }
 
   .contact__card {
-    padding: 35px 25px;
+    padding: 30px 20px;
     max-width: 450px;
     margin: 0 auto; 
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact__card h5 {
+    font-size: 1rem;
+    overflow-wrap: anywhere;
   }
 }

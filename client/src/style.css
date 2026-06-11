@@ -18,8 +18,22 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
 section {
-  padding: 100px 200px;
+  padding: clamp(64px, 8vw, 100px) clamp(16px, 5vw, 200px);
 }
 
 @media (max-width: 1040px) {
@@ -658,6 +672,14 @@ header .navigation-items a.nav-action--admin:hover {
 }
 
 @media (max-width: 640px) {
+  header {
+    gap: 12px;
+  }
+
+  .home-corner-link {
+    display: none;
+  }
+
   .floating-whatsapp {
     right: 18px;
     bottom: 18px;
@@ -678,7 +700,7 @@ header .navigation-items a.nav-action--admin:hover {
 
 
 .hero {
-  min-height: 100vh; 
+  min-height: 100svh; 
   width: 100%;
   background-color: #000000; 
   display: flex;
@@ -692,7 +714,7 @@ header .navigation-items a.nav-action--admin:hover {
 .hero__container {
   max-width: 1200px;
   width: 100%;
-  padding: 0 4%;
+  padding: 92px 4% 42px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -703,7 +725,7 @@ header .navigation-items a.nav-action--admin:hover {
 
 .hero__container p {
   font-family: 'Arial Black', 'Impact', sans-serif; 
-  font-size: clamp(4rem, 12vw, 9.5rem); 
+  font-size: clamp(3.1rem, 12vw, 9.5rem); 
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: 2px;
@@ -737,7 +759,7 @@ header .navigation-items a.nav-action--admin:hover {
 }
 
 .click {
-  font-size: 1.875rem; 
+  font-size: clamp(1.05rem, 4vw, 1.875rem); 
   color: #6b7280;      
   font-weight: 700;    
   text-decoration: none; 
@@ -763,6 +785,10 @@ header .navigation-items a.nav-action--admin:hover {
 
 
 @media (max-width: 768px) {
+  section {
+    padding: 68px 16px;
+  }
+
   .hero__container p {
     letter-spacing: 1px;
     -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2); 
@@ -775,7 +801,7 @@ header .navigation-items a.nav-action--admin:hover {
 
 @media (max-width: 576px) {
   header {
-    padding: 15px 4%;
+    padding: 12px 4%;
   }
   header .brand {
     gap: 9px;
@@ -785,8 +811,18 @@ header .navigation-items a.nav-action--admin:hover {
     height: 38px;
   }
   header .brand-text {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
     letter-spacing: 1px;
+  }
+
+  .hero__container {
+    padding-top: 84px;
+  }
+
+  .hero__container p {
+    font-size: clamp(2.55rem, 17vw, 4.8rem);
+    line-height: 1;
+    overflow-wrap: anywhere;
   }
 }
 

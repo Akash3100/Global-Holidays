@@ -1,6 +1,6 @@
 
 .gallery {
-  padding: 80px 5%;
+  padding: clamp(58px, 7vw, 80px) clamp(16px, 5vw, 5%);
   background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%); 
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -42,14 +42,14 @@
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr)); 
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); 
+  gap: clamp(14px, 2vw, 20px);
 }
 
 
 .gallery__card {
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   background: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -148,7 +148,7 @@
 
 @media (max-width: 768px) {
   .gallery {
-    padding: 50px 4%;
+    padding: 54px 16px;
   }
   
   .section__header {
@@ -156,7 +156,7 @@
   }
 
   .gallery__grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 15px;
   }
   
@@ -168,5 +168,9 @@
 @media (max-width: 480px) {
   .gallery__grid {
     grid-template-columns: 1fr; 
+  }
+
+  .gallery__content {
+    padding: 18px 16px;
   }
 }
