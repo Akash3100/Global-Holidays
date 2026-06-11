@@ -1,0 +1,274 @@
+
+
+
+.discover {
+  padding: 80px 8%; 
+  background-color: #f8fafc; 
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.discover__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background: linear-gradient(rgb(28, 87, 28) 20% , rgb(42, 180, 42) 70%, );
+}
+
+
+.discover .section__header {
+  font-size: 2.2rem;
+  color: #1b3b2b; 
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.discover .section__subheader {
+  font-size: 1rem;
+  color: #64748b;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+
+.discover__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  width: 100%;
+}
+
+
+.discover__card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.discover__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(27, 59, 43, 0.12);
+  border-color: rgba(194, 155, 104, 0.25); 
+}
+
+
+.discover__image {
+  width: 100%;
+  height: 240px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.discover__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+}
+
+
+.discover__card:hover .discover__image img {
+  transform: scale(1.08);
+}
+
+
+
+
+.discover__card__content {
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  justify-content: space-between;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+  
+  
+  box-shadow: 0 10px 25px -5px rgba(27, 59, 43, 0.05),
+              0 4px 12px -5px rgba(8, 53, 8, 0.03);
+  
+  
+  border-radius: 0 0 20px 20px; 
+  border: 1px solid #f1f5f9;
+  border-top: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.discover__card:hover .discover__card__content {
+  border-color: rgba(194, 155, 104, 0.2); 
+  
+  
+  box-shadow: 0 20px 35px -10px rgba(8, 53, 8, 0.15),
+              0 10px 20px -8px rgba(194, 155, 104, 0.1);
+  
+  background-color: #ffffff;
+}
+
+
+.discover__card__content h4 {
+  font-size: 1.4rem;
+  color: #1b3b2b; 
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+
+.discover__card:hover .discover__card__content h4 {
+  color: #c29b68; 
+}
+
+
+.discover__card__content p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0 0 25px 0;
+  flex-grow: 1;
+}
+
+
+.discover__btn {
+  background: #1b3b2b; 
+  color: #ffffff;
+  border: none;
+  padding: 13px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  box-shadow: 0 4px 10px rgba(27, 59, 43, 0.15);
+  transition: all 0.3s ease;
+}
+
+
+.discover__btn:hover {
+  background-color: #c29b68; 
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(194, 155, 104, 0.3);
+  transform: translateY(-2px);
+}
+
+
+.discover__btn i {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.discover__btn:hover i {
+  transform: translateX(5px); 
+}
+
+.discover__card__content h4 {
+  font-size: 1.35rem;
+  color: #1b3b2b;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.discover__card__content p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+  flex-grow: 1; 
+}
+
+
+.discover__btn {
+  background: transparent;
+  color: #1b3b2b;
+  border: 1.5px solid #1b3b2b;
+  padding: 11px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+
+.discover__btn:hover {
+  background-color: #1b3b2b;
+  color: #ffffff;
+  border-color: #1b3b2b;
+  box-shadow: 0 4px 12px rgba(27, 59, 43, 0.15);
+}
+
+
+.discover__btn i {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.discover__btn:hover i {
+  transform: translateX(4px);
+  color: #c29b68; 
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .discover {
+    padding: 60px 5%; 
+  }
+  
+  .discover__grid {
+    gap: 20px;
+  }
+  
+  .discover__image {
+    height: 200px; 
+  }
+}
+
+
+@media (max-width: 840px) {
+  .discover__grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+
+@media (max-width: 550px) {
+  .discover {
+    padding: 50px 20px; 
+  }
+
+  .discover .section__header {
+    font-size: 1.8rem;
+  }
+
+  .discover__grid {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+  
+  .discover__image {
+    height: 220px;
+  }
+}

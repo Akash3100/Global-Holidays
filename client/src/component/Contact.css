@@ -1,0 +1,259 @@
+
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css');
+
+
+
+
+.contact {
+  padding: 80px 8%; 
+  background: linear-gradient(
+    145deg,
+    #0b1322 0%,
+    #0d2217 50%,
+    #070c14 100%
+  ); 
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+}
+
+
+.contact__col:first-child h4 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 15px 0;
+  position: relative;
+}
+
+
+.contact__col:first-child h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background: #c29b68; 
+  border-radius: 2px;
+}
+
+.contact__col:first-child p {
+  color: #94a3b8; 
+  font-size: 1rem;
+  margin: 25px 0 0 0;
+}
+
+
+.contact__card {
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+
+.contact__card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(194, 155, 104, 0.4); 
+
+  
+  box-shadow:
+    0 20px 40px -15px rgba(27, 59, 43, 0.6),
+    0 10px 20px -10px rgba(194, 155, 104, 0.2);
+}
+
+
+
+
+.contact__icon-link {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(
+    135deg,
+    rgba(27, 59, 43, 0.3) 0%,
+    rgba(13, 34, 23, 0.6) 100%
+  );
+
+  
+  border-radius: 18px;
+  border: 1.5px solid rgba(194, 155, 104, 0.3); 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+  text-decoration: none;
+  transform: rotate(45deg); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.contact__icon-link i {
+  font-size: 1.6rem;
+  color: #c29b68; 
+  display: inline-block; 
+
+  
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+}
+
+
+.contact__card:hover .contact__icon-link,
+.contact__icon-link:hover {
+  background: #1b3b2b; 
+  border-color: #c29b68; 
+
+  
+  border-radius: 50%; 
+  transform: rotate(0deg);
+
+  
+  box-shadow:
+    0 0 20px rgba(194, 155, 104, 0.4),
+    0 10px 20px rgba(27, 59, 43, 0.4);
+}
+
+
+.contact__card:hover .contact__icon-link i,
+.contact__icon-link:hover i {
+  color: #ffffff; 
+  transform: rotate(0deg) scale(1.1); 
+}
+
+
+
+
+.contact__card h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+
+.contact__card h5 {
+  font-size: 1.15rem;
+  color: #c29b68; 
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contact__card h5 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact__card h5 a:hover {
+  color: #f3d19d;
+}
+
+.contact__card p {
+  font-size: 0.88rem;
+  color: #22c55e; 
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+.contact__card p::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+
+.contact__card:not(:has(h5)) p {
+  color: #94a3b8;
+}
+.contact__card:not(:has(h5)) p::before {
+  display: none; 
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .contact__container {
+    gap: 25px;
+  }
+
+  .contact__col:first-child h4 {
+    font-size: 1.8rem;
+  }
+}
+
+
+@media (max-width: 840px) {
+  .contact__container {
+    grid-template-columns: 1fr; 
+    gap: 35px;
+  }
+
+  .contact__col:first-child {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .contact__col:first-child h4::after {
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+
+  .contact__card {
+    padding: 35px 25px;
+    max-width: 450px;
+    margin: 0 auto; 
+    width: 100%;
+  }
+}

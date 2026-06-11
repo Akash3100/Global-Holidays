@@ -1,0 +1,351 @@
+.activities {
+  padding: 96px clamp(20px, 4vw, 72px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 245, 0.98)),
+    #f6faf7;
+}
+
+.activities__container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.activities__header {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.activities__header p {
+  color: #c28b1f;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.activities__header h2 {
+  color: #173929;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.activities__header span {
+  display: block;
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: #5c6f66;
+  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.activities__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(390px, 0.78fr);
+  gap: clamp(28px, 4.5vw, 56px);
+  align-items: stretch;
+}
+
+.activities__image-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: 0;
+}
+
+.activities__image-viewport {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  background: #163426;
+  box-shadow: 0 24px 58px rgba(25, 50, 38, 0.18);
+}
+
+.activities__feature-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #050807;
+}
+
+.activities__image-overlay {
+  position: absolute;
+  inset: 0 0 auto;
+  padding: clamp(20px, 3vw, 34px);
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(6, 20, 13, 0.68), rgba(6, 20, 13, 0));
+  pointer-events: none;
+}
+
+.activities__image-overlay p {
+  margin: 0 0 8px;
+  color: #ffd76a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.activities__image-overlay h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.activities__control {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+  background: rgba(17, 57, 38, 0.84);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.45rem;
+  box-shadow: 0 14px 28px rgba(12, 40, 27, 0.22);
+  transform: translateY(-50%);
+  transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.activities__control:hover {
+  background: #f1b72e;
+  color: #173929;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.activities__control--left {
+  left: 18px;
+}
+
+.activities__control--right {
+  right: 18px;
+}
+
+.activities__reel-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 14px;
+  overflow: visible;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  max-width: 440px;
+  width: 100%;
+}
+
+.activity-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid rgba(23, 57, 41, 0.08);
+}
+
+.activity-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d4b35, #123222);
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.activity-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.activity-info p {
+  margin: 0 0 4px;
+  color: #c28b1f;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.activity-info h3 {
+  margin: 0;
+  color: #173929;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.activity-card__frame {
+  position: relative;
+  width: 100%;
+  height: min(78vh, 650px);
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #050807;
+  box-shadow: 0 20px 48px rgba(25, 50, 38, 0.16);
+}
+
+.activity-card__frame .instagram-media,
+.activity-card__frame iframe {
+  position: absolute !important;
+  left: 50% !important;
+  top: 0 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: translateX(-50%) !important;
+}
+
+.activity-card__frame iframe {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.activity-card__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #050807;
+}
+
+.activity-card__meta {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  border-top: 0;
+}
+
+.activity-card__link {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #173929;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.activity-card__link:hover {
+  background: #c28b1f;
+  transform: translateY(-2px);
+}
+
+.activities__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.activities__dots button {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(23, 57, 41, 0.24);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.activities__dots button:hover {
+  background: rgba(23, 57, 41, 0.48);
+}
+
+.activities__dots button.active {
+  width: 30px;
+  background: #c28b1f;
+}
+
+@media (max-width: 1060px) {
+  .activities__content {
+    grid-template-columns: 1fr;
+  }
+
+  .activities__reel-section {
+    max-width: 500px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .activity-card__frame {
+    height: min(78vh, 660px);
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 720px) {
+  .activities {
+    padding: 72px 16px;
+  }
+
+  .activities__header {
+    margin-bottom: 28px;
+  }
+
+  .activities__image-viewport {
+    min-height: 390px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .activities__control {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+
+  .activities__control--left {
+    left: 12px;
+  }
+
+  .activities__control--right {
+    right: 12px;
+  }
+
+  .activity-card__heading {
+    padding: 16px;
+  }
+
+  .activity-card__frame {
+    height: 590px;
+    min-height: 590px;
+  }
+
+  .activity-card__meta {
+    justify-content: stretch;
+    padding: 14px 16px 16px;
+  }
+
+  .activity-card__link {
+    width: 100%;
+  }
+}

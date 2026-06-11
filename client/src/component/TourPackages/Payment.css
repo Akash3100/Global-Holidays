@@ -1,0 +1,157 @@
+
+.pmnt-page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.pmnt-main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+
+.pmnt-site-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pmnt-site-header h1 {
+  font-size: 28px;
+  color: #1a2a6c;
+  margin: 0 0 10px 0;
+}
+
+.pmnt-tagline {
+  font-size: 15px;
+  color: #57606f;
+  margin: 0;
+}
+
+
+.pmnt-payment-form, 
+.pmnt-confirmation {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.pmnt-payment-form h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin: 0 0 25px 0;
+  border-bottom: 2px solid #f1f2f6;
+  padding-bottom: 12px;
+}
+
+.pmnt-payment-option {
+  background: #f8f9fa;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+}
+
+
+.pmnt-payment-option input[type="radio"] {
+  margin-right: 12px;
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.pmnt-payment-option label[htmlFor] {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.pmnt-details {
+  display: none; 
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #dcdde1;
+  animation: pmnt-slideDown 0.3s ease-in-out;
+}
+
+.pmnt-details label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #57606f;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.pmnt-details input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccd1d9;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #2c3e50;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.pmnt-details input:focus {
+  border-color: #1a2a6c;
+  outline: none;
+}
+
+
+.pmnt-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+
+.pmnt-btn-primary {
+  background: #1a2a6c;
+  color: #ffffff;
+}
+
+.pmnt-btn-primary:hover {
+  background: #141e30;
+  box-shadow: 0 4px 12px rgba(26, 42, 108, 0.2);
+}
+
+
+.pmnt-confirmation {
+  text-align: center;
+}
+
+.pmnt-confirmation h3 {
+  color: #27ae60;
+  font-size: 22px;
+  margin: 0 0 15px 0;
+}
+
+.pmnt-confirmation p {
+  color: #57606f;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+@keyframes pmnt-slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
